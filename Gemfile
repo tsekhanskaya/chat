@@ -7,6 +7,7 @@ ruby '3.0.3'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'figaro'
 gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'pg', '~> 1.1'
@@ -30,3 +31,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'devise', '~> 4.8'
