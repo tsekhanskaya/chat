@@ -7,6 +7,7 @@ ruby '3.0.3'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'figaro'
 gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'pg', '~> 1.1'
