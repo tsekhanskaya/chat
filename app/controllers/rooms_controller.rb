@@ -11,4 +11,8 @@ class RoomsController < ApplicationController
 
     @new_room.broadcast_append_to :rooms if @new_room&.save
   end
+
+  def show
+    @room = Room.find_by!(title: params[:title])
+  end
 end
