@@ -14,5 +14,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find_by!(title: params[:title])
+    @messages = @room.messages
+    @new_message = current_user&.messages&.build
   end
 end
