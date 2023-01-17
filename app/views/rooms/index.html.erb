@@ -1,2 +1,9 @@
-<h1>Rooms#index</h1>
-<p>Find me in app/views/rooms/index.html.erb</p>
+<%= form_with model: @new_room do |f| %>
+
+  <%= f.submit "Create room",
+               class: "group relative flex w-32 justify-center rounded-md
+               border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white
+               hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
+               focus:ring-offset-2 cursor-pointer"%>
+
+<% end %>
