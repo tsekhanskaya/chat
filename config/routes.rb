@@ -6,5 +6,4 @@ Rails.application.routes.draw do
   resources :rooms, only: %i[show create], param: :title
 
   root to: 'rooms#index'
-
 end
