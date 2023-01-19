@@ -1,24 +1,29 @@
-# README
+# Chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
 
-Things you may want to cover:
+Simple chat with Hotwire, Turbo and Stimulus.
 
-* Ruby version
+* Ruby 3.0.3
+* Rails 7.0.4
+* PostgreSQL 15.1
 
-* System dependencies
+### Launching
 
-* Configuration
+1. Download or clone repo. Install all dependencies.
 
-* Database creation
+```bash
+$ bundle install
+```
 
-* Database initialization
+2. Prepare database
 
-* How to run the test suite
+```bash
+$ bin/setup
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. Start server
 
-* Deployment instructions
-
-* ...
+```bash
+$ bin/dev
+```
