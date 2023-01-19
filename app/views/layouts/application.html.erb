@@ -8,6 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <style>
+      <%= ".msg-#{current_user&.id}" %> {
+          background-color: #a9c3e7 !important;
+          padding: 10px;
+      }
+      <%= ".cont-#{current_user&.id}" %> {
+          display: flex;
+          justify-content: flex-end
+      }
+    </style>
   </head>
 
   <body>
@@ -42,7 +53,7 @@
 
     <header class="bg-white shadow">
       <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Turbochat</h1>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Chat</h1>
       </div>
     </header>
     <main>

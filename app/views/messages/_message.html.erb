@@ -1,13 +1,15 @@
-<div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg my-4 py-2 pl-1">
-  <div class="flex flex-row">
-    <div class="basis-1/12"><%= l(message.created_at, format: :short) %></div>
-    <div class="basis-3/12"><%= message.user.email %></div>
-    <div class="basis-7/12"><%= message.body %></div>
-    <div class="basis-1/12">
-      <%= link_to like_message_path(message), data: { "turbo-method": :post } do %>
-        <%= render partial: "messages/heart", locals: { user: user, message: message } %>
-        <%= render partial: "messages/likes_count", locals: { user: user, message: message } %>
-      <% end %>
+<div class="cont-<%= message.user.id %>">
+  <div class="message-box msg-<%= message.user.id %> " >
+    <span class="author"><%= message.user.email %></span>
+    <br>
+    <%= message.body %>
+    <br>
+    <div class="time-like">
+        <span><%= l(message.created_at, format: :short) %></span>
+        <%= link_to like_message_path(message), data: { "turbo-method": :post }, class: "like" do %>
+          <%= render partial: "messages/heart", locals: { user: user, message: message } %>
+          <%= render partial: "messages/likes_count", locals: { user: user, message: message } %>
+        <% end %>
     </div>
   </div>
 </div>
