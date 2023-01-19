@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.h-grow {
+    height: calc(100vh - 13rem);
+}
+.message-box {
+    width: fit-content;
+    max-width: 40%;
+    padding: 5px; /*10px; */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #c4c2c2;
+}
+
+.author {
+    font-weight: 700;
+}
+.time-like{
+    display: flex;
+    justify-content: space-between;
+}
